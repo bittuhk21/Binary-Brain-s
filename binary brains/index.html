@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaConnect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <body style="background-color: whitesmoke;"></body>
+  <header>
+   <h1>Welcome to LinguaConnect</h1>
+    <section id="dashboard">
+                    <!--  <h2>Dashboard</h2>-->
+        <!-- Dashboard content goes here -->
+        
+      </section>
+  
+      <!-- Video Call Section -->
+     <!-- <section id="video-call">-->
+       <!-- <h2>Video Call</h2>-->
+        <!-- Video call interface goes here -->
+       <!-- <img src="" alt="Video Call Image"> -->
+      </section>
+    </main>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+   
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Learn Languages, Connect with the World</h2>
+        <p><b>Our bridge to fluency. Learn any language from expert tutors online. Connect, learn, speak the world.</b></p>
+        <button>Learn More</button>
+      </div>
+    </section>
+    <section class="features">
+      <h2>Our Amazing Features</h2>
+      <div class="feature-card">
+        <h3>Learn Any Language</h3>
+        <p>Wide variety of languages offered, catering to diverse learning interests.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Expert Tutors</h3>
+        <p>Connect with qualified and experienced tutors for personalized learning.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Flexible Scheduling</h3>
+        <p>Book lessons at your convenience, fitting your busy schedule.</p>
+      </div>
+      <div class="feature-card">
+        <h3>One-on-One Video Calls</h3>
+        <p>Interactive learning environment with real-time video communication and screen sharing.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Subscription-Based</h3>
+        <p>Choose a plan that matches your learning needs and budget.</p>
+      </div>
+      <nav>
+       
+        
+        <a href="registration.html">Registration</a><br>
+        <a href="videoCall.html">Video Call</a><br>
+        <a href="assessment.html">Test Assessment</a><br>
+        <a href="livesession.html">Live Session</a><br>
+        <a href="tutorSearch.html">Tutor Search</a><br>
+        <a href="schedule.html">Schedule a Lesson</a><br>
+    
+      </nav>
+      <h2>Create Your Account</h2>
+      <p>Sign up to start your learning journey on LinguaConnect.</p>
+      <form id="signupForm">
+        <label for="userType">I am a:</label>
+        <select id="userType" required>
+          <option value="">Select User Type</option>
+          <option value="student">Student</option>
+          <option value="tutor">Tutor</option>
+        </select><h2></h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        <h2></h2>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <div id="tutorFields" style="display: none;">
+          <h3>Tutor Information</h3>
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" required>
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" required>
+          <label for="languages">Languages Taught (separate by commas):</label>
+          <textarea id="languages" required></textarea>
+          <label for="experience">Years of Experience:</label>
+          <input type="number" id="experience" min="0" required>
+          <label for="bio">Short Bio:</label>
+          <textarea id="bio"></textarea>
+        </div><h2></h2>
+        <button type="submit">Sign Up</button>
+      </form>
+    </section>
+    <section id="Student Search">
+     
+      <h2>Student Search</h2>
+      <label for="language">Select Language:</label>
+      <select id="language">
+        <option value="english">English</option>
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+      </select><br>
+      <h2></h2>
+      <label for="experience">Level:</label>
+      <select id="experience">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select><br>
+      <h2></h2>
+      <label for="priceRange">Price Range:</label>
+      <input type="range" id="priceRange" min="0" max="100" step="5" value="50">
+      <span id="priceDisplay">$50</span>
+      <br>
+      <h2></h2>
+      <button onclick="searchTutors()">Search</button>
+    </section>
+    <section id="tutorSearch">
+     
+      <h2>Tutor Search</h2>
+      <label for="language">Select Language:</label>
+      <select id="language">
+        <option value="english">English</option>
+        <option value="spanish">Spanish</option>
+        <option value="french">French</option>
+      </select><br>
+      <h2></h2>
+      <label for="experience">Experience Level:</label>
+      <select id="experience">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+      </select><br>
+      <h2></h2>
+      <label for="priceRange">Price Range:</label>
+      <input type="range" id="priceRange" min="0" max="100" step="5" value="50">
+      <span id="priceDisplay">$50</span>
+      <br>
+      <h2></h2>
+      <button onclick="searchTutors()">Search</button>
+    </section>
+
+    <section id="schedule">
+      <h2>Schedule a Lesson</h2>
+      <label for="date">Select Date:</label>
+      <input type="date" id="date"><br>
+      <h2></h2>
+      <label for="time">Select Time:</label>
+      <input type="time" id="time"><br>
+      <h2></h2>
+      <label for="duration">Select Duration:</label>
+      <select id="duration">
+        <option value="45">45 minutes</option>
+        <option value="60">60 minutes</option>
+        <option value="90">90 minutes</option>
+      </select><br>
+      <br>
+      <button onclick="scheduleLesson()">Schedule</button>
+    </section>
+
+    <header>
+      <h1>LinguaConnect - Live Session</h1>
+      <form id="login for live session"></form>
+    </header>
+  
+    <main>
+      <section id="login">
+        <h2>Login for live session</h2>
+        <form id="loginForm">
+          <button type="submit">Login</button>
+        </form>
+      </section>
+      <body>
+       <!-- <header>
+         <h1>LinguaConnect - Online Test</h1>
+        </header>
+      -->
+       <main>
+        <header>
+          <h1>LinguaConnect - Online Test</h1>
+         </header>
+          <section id="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+              <label for="userType">User Type:</label>
+              <select id="userType"><br>
+                <h2></h2>
+                <option value="teacher">Teacher</option>
+                <option value="student">Student</option>
+              </select>
+              <label for="username">Username:</label>
+              <input type="text" id="username" required>
+              <label for="password">Password:</label>
+              <input type="password" id="password" required>
+              <button type="submit">Login</button>
+            </form>
+          </section>
+          <h1></h1>
+  
+   
+  <footer>
+    <p>&copy; 2024 LinguaConnect Website. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaConnect - Online Testing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+-->
+
+   
+
+    <section id="teacher-dashboard" style="display: none;"> <h2>Teacher Dashboard</h2>
+      <select id="students">
+        <option value="">Select Student</option>
+      </select>
+      <div id="test-controls">
+        <button onclick="loadTest()">Load Test</button>
+        <button onclick="showStudentProgress()">Show Progress</button>
+      </div>
+      <div id="test-container">
+      </div>
+      <div id="student-progress">
+      </div>
+    </section>
+
+    <section id="student-review" style="display: none;"> <h2>Student Review</h2>
+      <select id="past-tests">
+        <option value="">Select Test</option>
+      </select>
+      <div id="student-test-review">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+   
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<!--<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaConnect - Live Session</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>LinguaConnect - Live Session</h1>
+    <form id="login for live session"></form>
+  </header>-->
+
+  <main>
+   <!-- <section id="login">
+      <h2>Login for live session</h2>
+      <form id="loginForm">
+        <button type="submit">Login</button>
+      </form>
+    </section>-->
+
+    <section id="teacher-session" style="display: none;">
+      <h2>Live Session</h2>
+      <div id="video-container">
+        </div>
+      <div id="chat-box">
+        </div>
+      <div id="controls">
+        <button onclick="startSession()">Start Session</button>
+        <button onclick="endSession()">End Session</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+  
+  </footer>
+  <script src="script.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaConnect</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <!-- <header>
+    <h1>LinguaConnect</h1>
+  </header>-->
+
+  <!--<section id="auth">
+    <h2>Welcome Back!</h2>
+    
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Sign In</button>
+    </form>
+  </section>-->
+
+  <section id="signup">
+   
+
+  <main>
+    <section id="internal-registration" style="display: none;">
+      <h2>Internal Registration (Optional)</h2>
+      </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 LinguaConnect Website. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaConnect - Tutor Search</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  
+  <script src="script.js"></script>
+  
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaConnect - Video Call</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="video
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+        background-image: url('lingua-background.jpg'); /* Replace 'lingua-background.jpg' with your actual background image path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #333; /* Set text color */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Doubt Session</h2>
+    </header>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    
+    <section id="videoCall">
+        <h2>Video Call</h2>
+        <div id="localVideo"></div>
+        <div id="remoteVideo"></div>
+        <button id="startCallBtn" onclick="startCall()">Start Call</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LinguaConnect. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaConnect - Test Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    </header>
+    
+    <section id="assessment">
+        <header><h2>Test Assessment</h2></header>
+        <form id="testForm">
+            <label for="question1">Question 1:</label>
+            <textarea id="question1" rows="4" cols="50"></textarea>
+            <label for="feedback1">Feedback for Question 1:</label>
+            <textarea id="feedback1" rows="4" cols="50"></textarea><br>
+            <!-- Add more questions and feedback fields here -->
+            <button type="submit">Submit Test</button>
+        </form>
+    </section>
+
+    <section id="pastTests">
+        <h2>Past Tests</h2>
+        <ul id="testList">
+            <!-- Past tests will be dynamically added here -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 LinguaConnect. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+  
+    <main>
+   

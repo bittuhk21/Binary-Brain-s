@@ -1,0 +1,99 @@
+/* General Styles */
+
+body {
+    /*  background-image: url('https://m.media-amazon.com/images/I/71tHdgzW3iL.AC_UF894,1000_QL80.jpg');*/
+   background-repeat: no-repeat;
+ 
+ 
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
+    
+   }
+   
+   header {
+  /*  background-image: url('https://m.media-amazon.com/images/I/71tHdgzW3iL.AC_UF894,1000_QL80.jpg');*/
+     background-color: #4f7489;
+     color: #171b1d;
+     padding: 20px;
+     display: flex;
+     align-items: center;
+   }
+   
+   header img {
+     width:10px; /* Adjust the size as needed */
+     margin-right: 10px;
+   }
+   
+   footer {
+     background-color: #4c828b;
+     color: #fff;
+     padding: 10px;
+     position: fixed;
+     bottom: 0;
+     width: 100%;
+   }
+   
+   main {
+     padding: 20px;
+    /* background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg');*/
+   }
+   
+   section {
+     margin-bottom: 20px;
+   }
+   
+   h2 {
+     color: #383030;
+   }
+   
+   p {
+     color: #281f1f;
+   }
+   
+   button {
+     background-color: #007bff;
+     color: #302121;
+     border: none;
+     padding: 10px 20px;
+     cursor: pointer;
+     border-radius: 5px;
+   }
+   
+   button:hover {
+     background-color: #262a2f;
+   }
+   
+   /* Login Section */
+   
+   #login {
+     max-width: 400px;
+     margin: 0 auto;
+   }
+   
+   form {
+     display: flex;
+     flex-direction: column;
+   }
+   
+   input[type="text"],
+   input[type="password"] {
+     margin-bottom: 10px;
+     padding: 10px;
+     border: 1px solid #2c2020;
+     border-radius: 5px;
+   }
+   
+   /* Dashboard Section */
+   
+   #dashboard {
+     /* Add styling for dashboard section if needed */
+   }
+   
+   /* Video Call Section */
+   
+   #video-call {
+   
+     max-width: 800px;
+     margin: 0 auto;
+   }
